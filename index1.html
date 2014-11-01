@@ -13,10 +13,10 @@ teste();
 
 console.log(window.f);
 
-var teste2 = function(){
+var teste2 = (function(){
     var a = b = 3;
     return a;
-}
+})();
 
 console.log(window.b);
 
