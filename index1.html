@@ -12,13 +12,24 @@ var teste = function() {
 teste();
 
 console.log(window.f);
-
+//2 example
 var teste2 = (function(){
     var a = b = 3;
     return a;
 })();
 
 console.log(window.b);
+//3 example
+
+myname = "global";
+
+function func(){
+    alert(myname);
+    var myname = "local";
+    alert(myname);
+}
+
+func();
 
 </script>
 </body>
