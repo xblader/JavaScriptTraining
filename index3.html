@@ -1,0 +1,38 @@
+<html>
+<body>
+for in - capítulo 3
+<script>
+
+//the object
+var man = {
+    hands: 2,
+    legs:  2,
+    heads: 1
+};
+
+for(prop in man)
+  console.log(prop);
+
+//adding some function to prototype can change behaviour
+
+if(typeof Object.prototype.clone == "undefined"){
+    Object.prototype.clone = function(){};
+}
+
+for(prop in man){
+ if(man.hasOwnProperty(prop))
+    console.log(prop);
+}
+
+//caching
+
+var hasOwn = Object.prototype.hasOwnProperty;
+
+for(prop in man){
+ if(hasOwn.call(man,prop))
+    console.log(prop);
+}
+
+</script>
+</body>
+</html>
