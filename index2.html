@@ -1,0 +1,29 @@
+<html>
+<body>
+for - capítulo 2
+<script>
+
+//traditional for
+
+var array = [1,2,3,4,5,6,7,8,9];
+for(var i = 0; i < array.length; i++){
+    console.log(array[i]);
+}
+
+//avoid revaluation, in case of DOM elements, it could really slow down...
+
+var array = [1,2,3,4,5,6,7,8,9];
+var tam = array.length;
+for(var i = 0; i < tam; i++){
+    console.log(array[i]);
+}
+
+//being more performatic, comparing to zero.
+
+for(var i = array.length;i--;){
+    console.log(array[i]);
+}
+
+</script>
+</body>
+</html>
